@@ -27,6 +27,11 @@ describe('GET requests', () => {
 
 describe('CREATE request', () => {
     
+    test('Post /create endpoint, expect 201', async () =>{
+        const res = await request(app).post('/create',
+        body = {name: "fanta", description: "lemon", price: "100"});
+        expect(res.statusCode).toBe(201);
+    });
     // we could also test the create request
 
 });
