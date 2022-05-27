@@ -5,7 +5,7 @@ metadata:
   labels:
     app: lbg-api-app
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: lbg-api-app
@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: lbg-api-app
-        image: ${DOCKERHUB_USER}/${APP_NAME}:$TAG-${BUILD_ID}
+        image: gcr.io/lbg-090522/lbg-api-app:james-latest
         ports:
-        - containerPort: 4000
+        - containerPort: 
